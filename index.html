@@ -7,11 +7,20 @@
     
 </head>
 <body>
-    <div class="aa"></div>
+    <button onclick="ces()"></button>
     <script>
-        $(function(){
-            alert("hello jquery");
-        })
+        function ces(){
+            var xhr=new XMLHttpRequest;
+            xhr.open('get','http://118.195.171.31:8080/ces');
+            xhr.send();
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState===4){
+                    if(xhr.status===200){
+                        alert(xhr.responseText);
+                    }
+                }
+            }
+        }
     </script>
 </body>
 </html>
