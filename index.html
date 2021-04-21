@@ -10,9 +10,9 @@
     <button onclick="ces()">btn</button>
     <script>
         function ces(){
-            var xhr=new XMLHttpRequest;
-            xhr.open('get','http://118.195.171.31:8080/ces');
-            xhr.send();
+            var xhr=new XMLHttpRequest
+            xhr.open('get','http://118.195.171.31:8080/ces')
+            xhr.send()
             xhr.onreadystatechange=function(){
                 if(xhr.readyState===4){
                     if(xhr.status===200){
